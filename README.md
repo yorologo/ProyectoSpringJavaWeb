@@ -2,3 +2,4 @@
 
 Integrantes:
 Josue Esaud Gomez Gonzalez
+Rodolfo Illan Ramirez
