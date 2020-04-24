@@ -3,3 +3,4 @@
 Integrantes:
 Josue Esaud Gomez Gonzalez
 Rodolfo Illan Ramirez
+Laura Georgina Pérez
