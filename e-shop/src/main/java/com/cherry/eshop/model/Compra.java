@@ -1,6 +1,6 @@
 package com.cherry.eshop.model;
 
-import com.cherry.eshop.model.Productos;
+import com.cherry.eshop.model.Producto;
 import com.cherry.eshop.model.Ticket;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +27,7 @@ public class Compra {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "IDproduto", nullable = false)
-	private Productos productos;
+	private Producto producto;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "IDticket", nullable = false)
@@ -50,9 +50,9 @@ public class Compra {
 	 * 
 	 * Example: Compra myCompra = new Compra( val1, val2,.. );
 	 */
-	public Compra(int id, Productos productos, Ticket ticket, int Cantidad) {
+	public Compra(int id, Producto productos, Ticket ticket, int Cantidad) {
 		this.setId(id);
-		this.setProductos(productos);
+		this.setProducto(productos);
 		this.setTicket(ticket);
 		this.setCantidad(Cantidad);
 	}
@@ -69,12 +69,12 @@ public class Compra {
 		this.m_id = id;
 	}
 
-	public Productos getProductos() {
-		return this.productos;
+	public Producto getProductos() {
+		return this.producto;
 	}
 
-	public void setProductos(Productos productos) {
-		this.productos = productos;
+	public void setProducto(Producto producto) {
+		this.producto = producto;
 	}
 
 	public Ticket getTicket() {

@@ -16,8 +16,8 @@ import javax.persistence.Table;
 *  
 */
 @Entity
-@Table(name = "Productos")
-public class Productos {
+@Table(name = "Producto")
+public class Producto {
 
 	// fields
 	@Id
@@ -27,6 +27,9 @@ public class Productos {
 
 	@Column(name = "Nombre", nullable = false)
 	private String m_Nombre;
+
+	@Column(name = "Imagen")
+	private String m_Imagen;
 
 	@Column(name = "Precio", nullable = false)
 	private double m_Precio;
@@ -38,20 +41,21 @@ public class Productos {
 	/**
 	 * Constructor
 	 * 
-	 * Example: Productos myProductos = new Productos();
+	 * Example: Producto myProducto = new Producto();
 	 */
-	public Productos() {
+	public Producto() {
 		// empty constructor
 	}
 
 	/**
 	 * Constructor
 	 * 
-	 * Example: Productos myProductos = new Productos( val1, val2,.. );
+	 * Example: Producto myProducto = new Producto( val1, val2,.. );
 	 */
-	public Productos(int id, String Nombre, double Precio) {
+	public Producto(int id, String Nombre, String Imagen, double Precio) {
 		this.setId(id);
 		this.setNombre(Nombre);
+		this.setImagen(Imagen);
 		this.setPrecio(Precio);
 	}
 
@@ -73,6 +77,14 @@ public class Productos {
 
 	public void setNombre(String Nombre) {
 		this.m_Nombre = Nombre;
+	}
+
+	public String getImagen() {
+		return this.m_Imagen;
+	}
+
+	public void setImagen(String Imagen) {
+		this.m_Imagen = Imagen;
 	}
 
 	public double getPrecio() {
