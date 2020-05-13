@@ -1,0 +1,17 @@
+@font-face {
+    font-family: MyCourgette;
+    src: url(../fonts/Courgette-Regular.ttf);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#tittle-name{
+    font-style: MyCourgette;
+}
+
+#principal {
+    height: 100%;
+}
