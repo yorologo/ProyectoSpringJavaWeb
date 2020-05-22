@@ -143,5 +143,26 @@ public class ProductoDao {
 		}
 		return list;
 	}
+	
+	public static List<Producto> showAll() {
+		List<Producto> list = new ArrayList<Producto>();
+		// Transaction trans = null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
+
+		try {
+			// trans = session.beginTransaction();
+
+			list = session.createQuery("from Producto").list();
+
+			// trans.commit();
+		} catch (HibernateException e) {
+			// if (trans != null) { trans.rollback(); }
+			e.printStackTrace();
+		} finally {
+			// session.flush();
+			session.close();
+		}
+		return list;
+	}
 
 }
