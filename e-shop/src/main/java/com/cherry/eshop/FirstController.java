@@ -15,7 +15,7 @@ import com.cherry.eshop.controller.dao.ProductoDao;
 @Controller
 public class FirstController {
 
-	@RequestMapping(value = "/greeting", method = RequestMethod.POST)
+	@RequestMapping(value = "/eshop", method = RequestMethod.POST)
 	public String greeting(Model model) {
 		List<Producto> productos = ProductoDao.showAll();
 		String content = "";
@@ -26,13 +26,15 @@ public class FirstController {
 			content += "<div class=\"col\"><div class=\"card\" style=\"width: 18rem;\"><img src=\"img/"
 					+ producto.getImagen()
 					+ "\" class=\"card-img-top\" alt=\"...\"><div class=\"card-body bg-info text-white text-center\"><h5 class=\"card-title\">"
-					+ producto.getNombre() + "</h5><br><label class=\"col col-form-label\">$ " + producto.getPrecio()
-					+ "</label><div class=\"form-group row\"><label class=\"col col-form-label\">Cantidad</label><div class=\"col\"><input type=\"number\" id=\"cantidad"
+					+ producto.getNombre()
+					+ "</h5><div class=\"form-group row\"><label class=\"col col-form-label\">Precio por Kg:</label><label class=\"col col-form-label\">$ "
+					+ producto.getPrecio()
+					+ "</label></div><div class=\"form-group row\"><label class=\"col col-form-label\">Cantidad:</label><div class=\"col\"><input type=\"number\" id=\"cantidad"
 					+ count
-					+ "\" class=\"form-control\" min=\"0\" step=\"1\" value=\"0\"></div></div></div></div></div>";
-			if (count % 4 - 1 == 0)
-				content += "</div>";
+					+ "\" class=\"form-control\" min=\"0\" step=\"1\" value=\"0\"></div><label class=\"col col-form-label\">Kg</label></div></div></div></div>";
 			count++;
+			if (count % 4 == 0)
+				content += "</div>";
 		}
 		for (int i = count % 4; i < 4 && i != 0; i++) {
 			content += "<div class=\"col\"></div>";
@@ -40,7 +42,7 @@ public class FirstController {
 				content += "</div>";
 		}
 		model.addAttribute("content", content);
-		return "greeting";
+		return "eshop";
 	}
 
 }
