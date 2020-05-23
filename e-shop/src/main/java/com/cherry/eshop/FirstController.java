@@ -42,6 +42,7 @@ public class FirstController {
 				content += "</div>";
 		}
 		model.addAttribute("content", content);
+		model.addAttribute("contar", count);
 		return "eshop";
 	}
 
