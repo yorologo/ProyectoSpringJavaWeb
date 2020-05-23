@@ -1,17 +1,28 @@
 @font-face {
-    font-family: MyCourgette;
-    src: url(../fonts/Courgette-Regular.ttf);
+  font-family: MyCourgette;
+  src: url(../fonts/Courgette-Regular.ttf);
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
-#tittle-name{
-    font-style: MyCourgette;
+#tittle-name {
+  font-style: MyCourgette;
 }
 
 #principal {
-    height: 100%;
+  height: 100%;
+}
+.navegador {
+  background-color: #51df2e;
+}
+
+.texy{
+    color: #13960e
+}
+
+.fondo {
+  background-image: url(../img/frutas.jpg);
 }
