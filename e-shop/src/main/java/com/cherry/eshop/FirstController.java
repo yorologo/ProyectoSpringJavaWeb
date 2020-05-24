@@ -27,7 +27,9 @@ public class FirstController {
 					+ producto.getImagen()
 					+ "\" class=\"card-img-top\" alt=\"...\"><div class=\"card-body bg-info text-white text-center\"><h5 class=\"card-title\">"
 					+ producto.getNombre()
-					+ "</h5><div class=\"form-group row\"><label class=\"col col-form-label\">Precio por Kg:</label><label class=\"col col-form-label\">$ "
+					+ "</h5><div class=\"form-group row\"><label class=\"col col-form-label\">Precio por Kg:</label><label id=\"precio"
+					+ count
+					+ "\" class=\"col col-form-label\">$ "
 					+ producto.getPrecio()
 					+ "</label></div><div class=\"form-group row\"><label class=\"col col-form-label\">Cantidad:</label><div class=\"col\"><input type=\"number\" id=\"cantidad"
 					+ count
