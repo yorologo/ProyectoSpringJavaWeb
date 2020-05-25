@@ -23,9 +23,9 @@ public class FirstController {
 		for (Producto producto : productos) {
 			if (count % 4 == 0)
 				content += "<div class=\"row d-flex flex-row justify-content m-3\">";
-			content += "<div class=\"col\"><div class=\"card\" style=\"width: 18rem;\"><img src=\"img/"
+			content += "<div class=\"col\"><div class=\"card border-success\" style=\"width: 18rem;\"><img src=\"img/"
 					+ producto.getImagen()
-					+ "\" class=\"card-img-top\" alt=\"...\"><div class=\"card-body bg-info text-white text-center\"><h5 class=\"card-title\">"
+					+ "\" class=\"card-img-top card border-success\" alt=\"...\"><div class=\"card-body bg-info card border-success text-white text-center\"><h5 class=\"card-title\">"
 					+ producto.getNombre()
 					+ "</h5><div class=\"form-group row\"><label class=\"col col-form-label\">Precio por Kg:</label><label id=\"precio"
 					+ count
