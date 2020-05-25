@@ -10,11 +10,7 @@
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/eshop?serverTimezone=UTC</property>
 		<property name="connection.username">root</property>
-<<<<<<< HEAD
 		<property name="connection.password">123</property>
-=======
-		<property name="connection.password">123456</property>
->>>>>>> branch 'pruebas' of https://github.com/yorologo/ProyectoSpringJavaWeb.git
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
