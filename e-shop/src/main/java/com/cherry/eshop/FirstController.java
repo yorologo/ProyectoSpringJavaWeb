@@ -25,7 +25,7 @@ public class FirstController {
 				content += "<div class=\"row d-flex flex-row justify-content m-3\">";
 			content += "<div class=\"col\"><div class=\"card border-success\" style=\"width: 18rem;\"><img src=\"img/"
 					+ producto.getImagen()
-					+ "\" class=\"card-img-top card border-success\" alt=\"...\"><div class=\"card-body bg-info card border-success text-white text-center\"><h5 class=\"card-title\">"
+					+ "\" class=\"card-img-top card border-success\" alt=\"...\"><div class=\"card-body bg-info texy text-centerborder bg-transparent card border-success text-dark\"><h5 class=\"card-title\" style=\"font-family: 'Sriracha', cursive;\">"
 					+ producto.getNombre()
 					+ "</h5><div class=\"form-group row\"><label class=\"col col-form-label\">Precio por Kg:</label><label id=\"precio"
 					+ count
