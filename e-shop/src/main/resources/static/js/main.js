@@ -10,5 +10,5 @@ function sumaElementos() {
         total += Math.round(parseFloat(document.getElementById("cantidad" + index).value.replace(",",".")) * parseFloat(document.getElementById("precio" + index).innerHTML.substr(1)) * 100) /100
     }
     console.log(total)
-    document.getElementById("modal-body").innerHTML = `$ ${total}`
+    document.getElementById("first-modal-body").innerHTML = `$ ${total}`
 }
